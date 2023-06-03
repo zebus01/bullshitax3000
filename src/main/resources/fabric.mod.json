@@ -12,9 +12,7 @@
   "icon": "assets/bullshitax3000/icon.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "com.github.zebus01.bullshitax3000.client.Bullshitax3000Client"
-    ],
+    "client": [],
     "main": [
       "com.github.zebus01.bullshitax3000.Bullshitax3000"
     ]
