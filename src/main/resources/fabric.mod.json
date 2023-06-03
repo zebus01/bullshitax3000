@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "bullshitax3000",
+  "version": "${version}",
+  "name": "bullshitax3000",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/zebus01/bullshitax3000"
+  },
+  "license": "MIT",
+  "icon": "assets/bullshitax3000/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.github.zebus01.bullshitax3000.client.Bullshitax3000Client"
+    ],
+    "main": [
+      "com.github.zebus01.bullshitax3000.Bullshitax3000"
+    ]
+  },
+  "mixins": [
+    "bullshitax3000.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
