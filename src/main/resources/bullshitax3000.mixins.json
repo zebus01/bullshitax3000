@@ -4,6 +4,8 @@
   "package": "com.github.zebus01.bullshitax3000.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "AnvilMixin",
+    "PlayerEntityMixin"
   ],
   "client": [
   ],
