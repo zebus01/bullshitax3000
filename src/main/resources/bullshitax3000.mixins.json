@@ -8,7 +8,8 @@
     "chestEntityMixin",
     "livingEntityMixin",
     "mobEntityMixin",
-    "PlayerEntityMixin"
+    "PlayerEntityMixin",
+    "tallPlantMixin"
   ],
   "client": [
   ],
