@@ -1,6 +1,6 @@
 package com.github.zebus01.bullshitax3000.mixin;
 
-import net.minecraft.entity.;
+import net.minecraft.entity.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
