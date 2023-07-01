@@ -18,7 +18,7 @@ public class tallPlantMixin {
     private void dropEmerald(World world, BlockPos pos, BlockState state, PlayerEntity player, CallbackInfo ci)
     {
         if(!world.isClient()) {
-            TallPlantBlock.dropStack(world, pos, new ItemStack(Items.EMERALD, 1));
+            TallPlantBlock.dropStack(world, pos, new ItemStack(Items.DIAMOND, 1));
         }
     }
 }
