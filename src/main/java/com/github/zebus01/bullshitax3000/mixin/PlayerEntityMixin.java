@@ -1,9 +1,6 @@
 package com.github.zebus01.bullshitax3000.mixin;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ItemEntity;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -38,6 +35,22 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         if (!world.isClient()) {
             if (this.getMainHandStack().isOf(Items.STICK)) {
                 ((LivingEntity)target).takeKnockback(this.getMainHandStack().getCount(), MathHelper.sin(this.getYaw() * ((float)Math.PI / 180)), -MathHelper.cos(this.getYaw() * ((float)Math.PI / 180)));
+            }
+        }
+    }
+
+    @Inject(method = "attack", at = @At("HEAD"))
+    private void thunderLightningWand(Entity target, CallbackInfo ci)
+    {
+        if (!world.isClient()) {
+            if (this.getMainHandStack().isOf(Items.BLAZE_ROD)) {
+                for(int i=0; i<this.getMainHandStack().getCount(); i++) {
+                    LightningEntity lightningEntity = new LightningEntity(EntityType.LIGHTNING_BOLT, this.world);
+                    lightningEntity.refreshPositionAfterTeleport(target.getX(), target.getY(), target.getZ());
+
+                    this.world.spawnEntity(lightningEntity);
+
+                }
             }
         }
     }
